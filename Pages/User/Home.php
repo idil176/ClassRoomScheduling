@@ -1,13 +1,9 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-session_start();
+<?php include '../../_layout/userlayout/header.php'; ?>
+User Home
+<?php include '../../_layout/userlayout/footer.php'; ?>
 
-include '../../_layout/userlayout/header.php';
-?>
-
-<h1>Test Sayfası</h1>
-
-<?php
-include '../../_layout/userlayout/footer.php';
-?>
+<script id="engine" 
+        src="../../assets/js/engine.js" 
+        data-module="User" 
+        data-page="Home">
+</script>

@@ -86,7 +86,7 @@ class Sc
 
         $_SESSION['auth'] = [
             'email' => $email,
-            'userType' => $response['data']['role'] ?? 'user',
+            'userType' => $response['role'] ?? 'user',
             'token' => $response['token']
         ];
 
@@ -104,4 +104,45 @@ class Sc
         ], $extra));
         exit;
     }
+
+    public function redirectByRole()
+    {
+        
+        session_start();
+        if (!isset($_SESSION['auth']['userType'])) {
+            header("Location: ../../Auth/Sign-in.php");
+            exit;
+        }
+
+        $userType = $_SESSION['auth']['userType'];
+        switch ($userType) {
+            case 'admin':
+                header("Location: ../../Pages/Admin/Home.php");
+                break;
+            case 'user':
+                header("Location: ../../Pages/User/Home.php");
+                break;
+            default:
+                header("Location: ../../Auth/Sign-in.php");
+                break;
+        }
+
+        exit;
+    }
+
+    public function checkAccess(string $requiredType)
+    {
+        session_start();
+        if (!isset($_SESSION['auth']['userType'])) {
+            header("Location: ../../Auth/Sign-in.php");
+            exit;
+        }
+
+        if ($_SESSION['auth']['userType'] !== $requiredType) {
+            // Farklı kullanıcı tipiyse kendi sayfasına at
+            $this->redirectByRole();
+            exit;
+        }
+    }
 }
+

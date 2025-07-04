@@ -1,3 +1,3 @@
 <?php include '../../_layout/adminlayout/header.php'; ?>
-User Home
+Admin Home
 <?php include '../../_layout/adminlayout/footer.php'; ?>

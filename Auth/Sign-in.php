@@ -74,6 +74,7 @@
         --bs-btn-active-color: var(--bs-btn-hover-color);
         --bs-btn-active-bg: #5a23c8;
         --bs-btn-active-border-color: #5a23c8
+
       }
 
       .bd-mode-toggle {
@@ -88,6 +89,12 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important
       }
+
+      
+      .yolculuk {
+        text-align:center
+      }
+      
     </style>
   </head>
   <body class="d-flex align-items-center">
@@ -144,9 +151,10 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto">
+       <div class="card shadow p-4" style="max-width: 600px; width: 135%; background-color:rgb(245, 246, 248);">
       <form id="sign-in-form" action="../_management/data-bridge/auth-login-ajax.php" method="post">
-        <img   class="mb-4 rounded"  src="../assets/images/norveç.jpg"  alt="" width="300" height="200">
-        <h1 class="h3 mb-4 fst-italic text-center "> Sihirli Yolculuk</h1>
+       <img   class="mb-4 rounded"  src="../assets/images/norveç.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
+    <h2 class="yolculuk">Sihirli Yolculuk</h2>
         <div class="form-floating">
           <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
           <label for="floatingInput">Email</label>
@@ -162,6 +170,8 @@
         <button class="btn btn-primary  w-100 py-2" type="submit" style="background-color:rgb(56, 74, 125);border-color:#fff !important":>Giriş</button>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2004-2050</p>
       </form>
+            <p class="mt-3 mb-0 text-body-secondary text-center">
+  Hesabınız Yoksa ⇒ <a href="Register.php" style="color:rgb(58, 94, 113); font-weight: bold;">Kayıt Ol</a>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
