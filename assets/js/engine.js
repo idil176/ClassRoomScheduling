@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     window.addEventListener('offline', () =>
@@ -53,6 +54,7 @@ Engine.runModule = function (module) {
             break;
         default:
             break;
+            
     }
 };
 
@@ -65,3 +67,35 @@ Engine.UserHome = function () {
     console.log("User/Home yüklendi");
     // Buraya user home işlemleri
 };
+$.ajax({
+    url: 'endpoint', // endpoint
+    type: 'POST',
+    data: {
+        verileriniz
+    },
+    dataType: 'json',
+    success: function (response) {
+        if (response.status === 'success') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Başarılı',
+                text: response.message || 'Ekleme Başarılı.'
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Hata',
+                text: response.message || 'Bir hata oluştu'
+            });
+        }
+    },
+    error: function (xhr, status, error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Sunucu Hatası',
+            text: 'İstek gönderilirken bir sorun oluştu.'
+        });
+        console.error('AJAX Hatası:', status, error);
+    }
+    
+});

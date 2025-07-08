@@ -49,7 +49,7 @@
   .btn-admin:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(232, 232, 232, 0.3);
-    background: linear-gradient(to right, #9d7c5b, #c3a88a);
+    background: linear-gradient(to right,rgb(227, 223, 218), #c3a88a);
     color: #000;
     border: 2px solidrgb(222, 218, 213);
   }

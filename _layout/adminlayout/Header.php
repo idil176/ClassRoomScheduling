@@ -90,7 +90,7 @@ $page  = $route['page'];
       .card {
         background-color:rgb(0, 0, 0);
         border: none;
-        box-shadow: 0 4px 10px rgba(113, 90, 58, 0.2);
+        box-shadow: 0 4px 10px rgba(9, 8, 7, 0.2);
         font-family: 'Cormorant Garamond', serif;
       }
 
