@@ -10,7 +10,7 @@
         }
 
         body {
-            background:darkgrey;
+            background:white;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
@@ -20,7 +20,7 @@
         }
 
         .register-container {
-            background: white;
+            background: rgba(96, 98, 198, 0.1);
             padding: 30px;
             border-0: 
             box-shadow: 0 0 15px rgba(36, 39, 200, 0.1);
@@ -51,7 +51,7 @@
         button {
             width: 100%;
             padding: 12px;
-            background-color:rgb(49, 80, 103);
+            background-color:rgb(19, 34, 78);
             color: white;
             font-weight: bold;
             border: none;
@@ -60,10 +60,7 @@
             transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color:rgb(37, 29, 152);
-        }
-
+       
         .error, .success {
             text-align: center;
             margin-top: 10px;
@@ -82,8 +79,8 @@
 </head>
 <body>
     <div class="register-container">
-    <img   class="mb-4 rounded"  src="../assets/images/norveç.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
-    <h2>Sihirli Yolculuğa Hoşgeldin!</h2>
+    <img   class="mb-4 rounded "  src="../assets/images/hogwarts.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
+    <h2>Hogwarts'a Hoşgeldiniz</h2>
     <form id="registerForm">
         <label>İsim:</label>
         <input type="text" name="name" required ><br>
@@ -99,7 +96,7 @@
      
 
         <p class="mt-3 mb-0 text-body-secondary text-center">
-  Hesabınız Varsa ⇒ <a href="Sign-in.php" style="color:rgb(58, 94, 113); font-weight: bold;">Giriş yap</a>
+  Hesabınız Varsa ⇒ <a href="Sign-in.php" style="color:rgb(0, 0, 0); font-weight: bold;">Giriş yap</a>
 </p>
 
         <div id="responseMessage" class="text-center mt-2 small  "></div>

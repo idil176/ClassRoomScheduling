@@ -25,7 +25,7 @@
       .b-example-divider {
         width: 100%;
         height: 3rem;
-        background-color: #0000001a;
+        background-color:rgba(10, 10, 10, 0.1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
@@ -97,7 +97,8 @@
       
     </style>
   </head>
-  <body class="d-flex align-items-center">
+ <body class="d-flex align-items-center" style="background-color:white;  color: white;">
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
@@ -151,10 +152,10 @@
       </ul>
     </div>
     <main class="form-signin w-100 m-auto">
-       <div class="card shadow p-4" style="max-width: 600px; width: 135%; background-color:rgb(245, 246, 248);">
+       <div class="card shadow p-4" style="max-width: 600px; width: 135%; background-color:rgba(96, 98, 198, 0.1);">
       <form id="sign-in-form" action="../_management/data-bridge/auth-login-ajax.php" method="post">
-       <img   class="mb-4 rounded"  src="../assets/images/norveç.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
-    <h2 class="yolculuk">Sihirli Yolculuk</h2>
+       <img   class="mb-4 rounded "  src="../assets/images/hogwarts.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
+    <h2 class="yolculuk">Draco Dormiens Nunquam Titillandus</h2>
         <div class="form-floating">
           <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
           <label for="floatingInput">Email</label>
@@ -167,11 +168,11 @@
           <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault">
           <label class="form-check-label" for="checkDefault"> Beni Hatırla </label>
         </div>
-        <button class="btn btn-primary  w-100 py-2" type="submit" style="background-color:rgb(56, 74, 125);border-color:#fff !important":>Giriş</button>
+        <button class="btn btn-primary  w-100 py-2" type="submit" style="background-color:rgb(19, 34, 78);border-color:#fff !important":>Giriş</button>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2004-2050</p>
       </form>
             <p class="mt-3 mb-0 text-body-secondary text-center">
-  Hesabınız Yoksa ⇒ <a href="Register.php" style="color:rgb(58, 94, 113); font-weight: bold;">Kayıt Ol</a>
+  Hesabınız Yoksa ⇒ <a href="Register.php" style="color:rgb(3, 3, 3); font-weight: bold;">Kayıt Ol</a>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
