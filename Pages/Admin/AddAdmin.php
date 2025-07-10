@@ -2,13 +2,17 @@
 
 <div class="row justify-content-center">
   <div class="col-md-6 col-xl-5">
-    <div class="card p-4 mt-4 mb-5 shadow-sm">
-      <h3 class="text-center mb-4" style="color:#715A3A; font-family:'Cormorant Garamond', serif;">Yeni Admin Ekle</h3>
+   <div class="card p-4 mt-4 mb-5 shadow-sm" style="background-color: rgba(6, 5, 51, 0.6) !important;">
+
+
+      <h3 class="text-center mb-4" style="color:rgb(255, 254, 254); font-family:'Cormorant Garamond', serif;">Yeni Büyücü Ekle</h3>
       <form id="addAdminForm">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Ad Soyad" required>
-          <label for="name">Ad Soyad</label>
-        </div>
+         <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="name" name="name" placeholder="Ad Soyad" required>
+  <label for="name" style="color: black;">Ad Soyad</label>
+</div>
+
 
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="email" name="email" placeholder="E-posta" required>
@@ -20,7 +24,7 @@
           <label for="password">Şifre</label>
         </div>
         <input type="hidden" value="<?= $_SESSION["auth"]["token"];?>" id="token" />
-        <button class="btn btn-admin w-100 py-2" type="submit">Admin Olarak Ekle</button>
+        <button class="btn btn-admin w-100 py-2" type="submit">Büyücü Ekle</button>
       </form>
     </div>
   </div>

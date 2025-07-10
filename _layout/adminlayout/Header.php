@@ -22,13 +22,14 @@ $page  = $route['page'];
     <style>
       /* Genel tema */
       body {
-        background-color: rgb(230, 230, 230) !important;
+        background-color: rgb(101, 98, 98) !important;
+        background-image: url('../../assets/images/ortak.png');
         font-family: 'Cormorant Garamond', serif !important;
       }
 
       /* Navbar */
       .navbar, .offcanvas-header {
-        background-color:rgb(52, 42, 70) !important;
+        background-color: rgba(71, 20, 12, 0.6) !important;
         color: rgb(8, 8, 7) !important;
       }
 
@@ -39,12 +40,13 @@ $page  = $route['page'];
 
       /* Sidebar */
       .sidebar {
-        background-color: #fef8f0 !important;
+        background-color: rgba(71, 20, 12, 0.6) !important;
+
         border-right: 2px solidrgb(232, 231, 230);
       }
 
       .sidebar .nav-link {
-        color:rgb(0, 0, 0);
+        color:rgb(244, 237, 237);
         padding: 12px 20px;
         font-size: 16px;
         font-family: 'Cormorant Garamond', serif;
@@ -61,27 +63,27 @@ $page  = $route['page'];
 
       .sidebar .nav-link:hover {
         background: linear-gradient(to right,rgb(0, 0, 0),rgb(0, 0, 0));
-        color: #000;
-        box-shadow: 0 4px 6px rgba(113, 90, 58, 0.1);
+        color: rgb(244, 237, 237);
+        box-shadow: 0 4px 6px rgb(244, 237, 237);
       }
 
       .sidebar .nav-link:hover i {
-        color: #000;
+        color: rgb(244, 237, 237);
       }
 
       .sidebar .nav-link.text-danger {
-        color: #a33a3a !important;
+        color:rgb(239, 236, 236) !important;
       }
 
       .sidebar .nav-link.text-danger:hover {
-        background-color: rgba(163, 58, 58, 0.1);
-        box-shadow: 0 4px 6px rgba(163, 58, 58, 0.15);
-        color: #000 !important;
+        background-color: rgba(194, 119, 119, 0.1);
+        box-shadow: 0 4px 6px rgb(244, 237, 237);
+        color: rgb(244, 237, 237) !important;
       }
 
       /* Başlıklar */
       h1.h2 {
-        color:rgb(0, 0, 0);
+        color:rgb(249, 248, 245);
         font-family: 'Cormorant Garamond', serif;
         font-weight: bold;
       }
@@ -90,7 +92,7 @@ $page  = $route['page'];
       .card {
         background-color:rgb(0, 0, 0);
         border: none;
-        box-shadow: 0 4px 10px rgba(9, 8, 7, 0.2);
+        box-shadow: 0 4px 10px rgb(244, 237, 237);
         font-family: 'Cormorant Garamond', serif;
       }
 
@@ -113,8 +115,8 @@ $page  = $route['page'];
 
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
-            <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+        <div class="sidebar border border-right col-md-3 col-lg-2 p-0 ">
+            <div class="offcanvas-md offcanvas-end " tabindex="-1" id="sidebarMenu"
                  aria-labelledby="sidebarMenuLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="sidebarMenuLabel">Admin Panel</h5>
@@ -124,22 +126,22 @@ $page  = $route['page'];
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddUser.php">
-                                <i class="fas fa-user-plus"></i> Kullanıcı Ekle
+                                <i class="fas fa-user-plus"></i> Muggle Ekle
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddAdmin.php">
-                                <i class="fas fa-user-shield"></i> Admin kle
+                                <i class="fas fa-user-shield"></i> Büyücü Ekle
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/NewReservation.php">
-                                <i class="fas fa-calendar-plus"></i> Yeni Rezervasyon
+                                <i class="fas fa-calendar-plus"></i> Yeni Kayıt
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Reservations.php">
-                                <i class="fas fa-calendar-check"></i> Rezervasyonlar
+                                <i class="fas fa-calendar-check"></i> Kayıtlar
                             </a>
                         </li>
                     </ul>
@@ -147,7 +149,7 @@ $page  = $route['page'];
                     <ul class="nav flex-column mb-auto">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Home.php">
-                                <i class="fas fa-house"></i> Ana Sayfa
+                                <i class="fas fa-house"></i> Ortak Salon
                             </a>
                         </li>
                         <li class="nav-item">
