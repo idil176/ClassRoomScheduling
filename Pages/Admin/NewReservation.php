@@ -3,7 +3,7 @@
 <div class="row justify-content-center">
   <div class="col-md-6 col-xl-5">
     <div class="card p-4 mt-4 mb-5 shadow-sm" style="background-color: rgba(6, 5, 51, 0.6) !important;">
-      <h3 class="text-center mb-4" style="color: rgb(230, 230, 230); font-family:'Cormorant Garamond', serif;">Yeni Rezervasyon Oluştur</h3>
+      <h3 class="text-center mb-4" style="color: rgb(230,230,230); font-family:'Cormorant Garamond', serif;">Yeni Kayıt Oluştur</h3>
       <form id="addReservationForm">
         <div class="form-floating mb-3">
           <input type="date" class="form-control" id="date" name="date" placeholder="Tarih" required>
@@ -39,7 +39,7 @@
         </div>
 
         <input type="hidden" id="token" value="<?= $_SESSION['auth']['token'] ?>" />
-        <button type="submit" class="btn btn-admin w-100 py-2">Rezervasyon Oluştur</button>
+        <button type="submit" class="btn btn-admin w-100 py-2">Kayıt Oluştur</button>
       </form>
     </div>
   </div>

@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     window.addEventListener('offline', () =>
-        Alert('İnternet bağlantınızı kontrol ediniz.')
+        alert('İnternet bağlantınızı kontrol ediniz.')
     );
 
     Engine.init();

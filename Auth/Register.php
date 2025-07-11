@@ -79,7 +79,7 @@
 </head>
 <body>
     <div class="register-container">
-    <img   class="mb-4 rounded "  src="../assets/images/hogwarts.jpg"  alt="" width="300" height="200" style="display: block; margin-left: auto; margin-right: auto;">
+    <img   class="mb-4 rounded "  src="../assets/images/şapka.jpg"  alt="" width="280" height="190" style="display: block; margin-left: auto; margin-right: auto;">
     <h2>Hogwarts'a Hoşgeldiniz</h2>
     <form id="registerForm">
         <label>İsim:</label>

@@ -4,7 +4,7 @@
   <div class="col-md-6 col-xl-5">
     <div class="card p-4 mt-4 mb-5 shadow-sm" style="background-color: rgba(6, 5, 51, 0.6) !important;">
 
-      <h3 class="text-center mb-4" style="color:rgb(255, 254, 254); font-family:'Cormorant Garamond', serif;">Yeni Kullanıcı Ekle</h3>
+      <h3 class="text-center mb-4" style="color:rgb(255, 254, 254); font-family:'Cormorant Garamond', serif;">Yeni Muggle Ekle</h3>
       <form id="addUserForm">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="name" name="name" placeholder="Ad Soyad" required>
@@ -22,7 +22,7 @@
         </div>
         
         <input type="hidden" value="<?= $_SESSION["auth"]["token"]; ?>" id="token" />
-        <button class="btn btn-admin w-100 py-2" type="submit">Kullanıcı Oluştur</button>
+        <button class="btn btn-admin w-100 py-2" type="submit"> Muggle Ekle</button>
       </form>
     </div>
   </div>
@@ -76,7 +76,7 @@
     }
 
     try {
-      const response = await fetch('/room_scheduler/create-user.php', {
+      const response = await fetch('/ClassRoomScheduling/create-user.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,23 +86,24 @@
       });
 
       const result = await response.json();
-      if (response.status === 201) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Kullanıcı başarıyla oluşturuldu!',
-          confirmButtonText: 'Tamam',
-          confirmButtonColor: '#715A3A'
-        }).then(() => {
-          window.location.href = 'Home.php';
-        });
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Hata',
-          text: result.message || 'Bir hata oluştu.',
-          confirmButtonColor: '#715A3A'
-        });
-      }
+     if (response.ok) {
+  Swal.fire({
+    icon: 'success',
+    title: 'Kullanıcı başarıyla oluşturuldu!',
+    confirmButtonText: 'Tamam',
+    confirmButtonColor: '#715A3A'
+  }).then(() => {
+    window.location.href = 'Home.php';
+  });
+} else {
+  Swal.fire({
+    icon: 'error',
+    title: 'Hata',
+    text: result.message || 'Bir hata oluştu.',
+    confirmButtonColor: '#715A3A'
+  });
+}
+
 
     } catch (error) {
       Swal.fire({
