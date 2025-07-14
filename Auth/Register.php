@@ -10,7 +10,7 @@
         }
 
         body {
-            background:white;
+            background:grey;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;

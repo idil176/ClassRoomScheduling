@@ -15,7 +15,7 @@
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        background-color: white; /* Arka plan beyaz */
+        background-color: grey; /* Arka plan beyaz */
       }
 
       .bd-placeholder-img {
@@ -150,16 +150,16 @@
             value="remember-me"
             id="checkDefault"
           />
-          <label class="form-check-label" for="checkDefault"> Beni Hatırla </label>
+          <label class="form-check-label" for="checkDefault"> Aparecium </label>
         </div>
         <button
           class="btn btn-primary w-100 py-2"
           type="submit"
           style="background-color: rgb(19, 34, 78); border-color: #fff !important"
         >
-          Giriş
+          Alohomora
         </button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2004-2050</p>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 11.yy-∞</p>
       </form>
       <p class="mt-3 mb-0 text-body-secondary text-center">
         Hesabınız Yoksa ⇒

@@ -115,7 +115,8 @@ $page  = $route['page'];
 
 <div class="container-fluid">
     <div class="row">
-        <div class="sidebar border border-right col-md-3 col-lg-2 p-0 ">
+        <div class="sidebar col-md-3 col-lg-2 p-0 ">
+
             <div class="offcanvas-md offcanvas-end " tabindex="-1" id="sidebarMenu"
                  aria-labelledby="sidebarMenuLabel">
                 <div class="offcanvas-header">
@@ -126,12 +127,12 @@ $page  = $route['page'];
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddUser.php">
-                                <i class="fas fa-user-plus"></i> Muggle Ekle
+                                <i class="fas fa-user-plus"></i> Büyücü Ekle
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/AddAdmin.php">
-                                <i class="fas fa-user-shield"></i> Büyücü Ekle
+                                <i class="fas fa-user-shield"></i> Kurucu Ekle
                             </a>
                         </li>
                         <li class="nav-item">
@@ -149,7 +150,7 @@ $page  = $route['page'];
                     <ul class="nav flex-column mb-auto">
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2" href="../../Pages/Admin/Home.php">
-                                <i class="fas fa-house"></i> Ortak Salon
+                                <i class="fas fa-house"></i> Büyük Salon
                             </a>
                         </li>
                         <li class="nav-item">
