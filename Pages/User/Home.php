@@ -1,7 +1,7 @@
 <?php include '../../_layout/userlayout/header.php'; ?>
 
 <div class="container mt-5">
-  <h3 class="mb-4 text-white">Kullanıcı Paneli</h3>
+  <h3 class="mb-4 text-white"></h3>
   <div class="row g-4">
 
     <div class="col-md-3">

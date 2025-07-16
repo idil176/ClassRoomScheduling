@@ -70,7 +70,7 @@ $page  = $route['page'];
 <body>
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">
-    Classroom Scheduling - <?= $modul ?> Page
+    HOGWARTS - <?= $modul ?> Page
   </a>
 </header>
 
@@ -91,7 +91,7 @@ $page  = $route['page'];
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 <?= $page === 'Home' ? 'active' : '' ?>"
                  href="../../Pages/User/Home.php">
-                <i class="fas fa-home"></i> Ana Sayfa
+                <i class="fas fa-home"></i> Büyük Salon
               </a>
             </li>
             <li class="nav-item">
