@@ -87,7 +87,8 @@ class Sc
         $_SESSION['auth'] = [
             'email' => $email,
             'userType' => $response['role'] ?? 'user',
-            'token' => $response['token']
+            'token' => $response['token'],
+            'id' => $response['id'],
         ];
 
         return $this->jsonResponse('success', 'Giriş başarılı.', [

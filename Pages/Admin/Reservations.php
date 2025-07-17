@@ -69,7 +69,17 @@ $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th>CREATED AT</th>
     </tr>
   </thead>
-  <tbody> <?php foreach ($reservations as $reservation): ?> <tr>
+  <tbody> 
+  <?php foreach ($reservations as $reservation): ?> 
+    <tr>
+      <td><?= htmlspecialchars($reservation['id']) ?></td>
+      <td>
+        <?php 
+          var_dump($reservation['lecturer_name']); // DEBUG: ekrana dök
+          echo htmlspecialchars($reservation['lecturer_name']); 
+        ?>
+      </td>
+
       <td> <?= htmlspecialchars($reservation['id']) ?> </td>
       <td> <?= htmlspecialchars($reservation['lecturer_name']) ?> </td>
       <td> <?= htmlspecialchars($reservation['room_name']) ?> </td>
