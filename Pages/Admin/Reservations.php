@@ -2,12 +2,15 @@
 include '../../_layout/adminlayout/header.php';
 require_once '../../../room_scheduler/db_test.php';
 
-$sql = "SELECT rr.id, rr.date, rr.start_time, rr.end_time, rr.status, rr.created_at, 
-               l.name AS lecturer_name, r.name AS room_name
-        FROM room_reservations rr
-        LEFT JOIN lecturers l ON rr.lecturer_id = l.id
-        JOIN rooms r ON rr.room_id = r.id
-        ORDER BY rr.created_at DESC";
+$sql = "SELECT 
+    rr.id, rr.date, rr.start_time, rr.end_time, rr.status, rr.created_at,
+    COALESCE(l.name, a.name) AS reserver_name,
+    r.name AS room_name
+FROM room_reservations rr
+LEFT JOIN lecturers l ON rr.lecturer_id = l.id
+LEFT JOIN admins a ON rr.lecturer_id = a.id
+JOIN rooms r ON rr.room_id = r.id
+ORDER BY rr.created_at DESC";
 
 $stmt = $pdo->query($sql);
 $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -69,19 +72,9 @@ $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th>CREATED AT</th>
     </tr>
   </thead>
-  <tbody> 
-  <?php foreach ($reservations as $reservation): ?> 
-    <tr>
-      <td><?= htmlspecialchars($reservation['id']) ?></td>
-      <td>
-        <?php 
-          var_dump($reservation['lecturer_name']); // DEBUG: ekrana dök
-          echo htmlspecialchars($reservation['lecturer_name']); 
-        ?>
-      </td>
-
+<tbody> <?php foreach ($reservations as $reservation): ?> <tr>
       <td> <?= htmlspecialchars($reservation['id']) ?> </td>
-      <td> <?= htmlspecialchars($reservation['lecturer_name']) ?> </td>
+      <td> <?= htmlspecialchars($reservation['reserver_name']) ?> </td>
       <td> <?= htmlspecialchars($reservation['room_name']) ?> </td>
       <td> <?= htmlspecialchars($reservation['date']) ?> </td>
       <td> <?= htmlspecialchars($reservation['start_time']) ?> </td>
